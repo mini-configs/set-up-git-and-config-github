@@ -1,4 +1,4 @@
-# Set up git on Windows :octocat: 
+## Set up git on Windows :octocat:
 
 ### Installing Git
 Download the installer for Windows from the Git [official site](https://git-scm.com/download/).
@@ -9,7 +9,7 @@ Git for Windows comes with Git Bash (it's own command prompt), and it looks bett
 
 - First we need creates a new ssh key, using the provided email as a label. Open Git Bash after installation and type: 
 ```
-ssh-keygen -t rsa -b 4096 -C "your_email@domain.com"
+$ ssh-keygen -t rsa -b 4096 -C "your_email@domain.com"
 ```
 It will return: 
 ```
@@ -32,8 +32,8 @@ Your identification has been saved in /Users/you/.ssh/id_rsa.
 ```
 - Start the ssh-agent in the background. Let's activate it:
 ```
-exec ssh-agent bash [Press enter]
-eval ssh-agent -s [Press enter]
+$ exec ssh-agent bash [Press enter]
+$ eval ssh-agent -s [Press enter]
 ```
 It will return something like that: 
 ```
@@ -45,7 +45,7 @@ echo Agent pid 18172;
 ```
 - Add your SSH key to the ssh-agent:
 ```
-ssh-add ~/.ssh/id_rsa [Press enter]
+$ ssh-add ~/.ssh/id_rsa [Press enter]
 ```
 It will return: 
 ```
@@ -53,7 +53,7 @@ Identity added: /c/Users/you/.ssh/id_rsa (your_email@domain.com)
 ```
 - Copies your SSH key to your clipboard
 ```
-cat ~/.ssh/id_rsa.pub > /dev/clipboard 
+$ cat ~/.ssh/id_rsa.pub > /dev/clipboard 
 ```
 
 2. Logged into your GitHub account, go to the top right options, click your profile picture:
@@ -62,4 +62,15 @@ cat ~/.ssh/id_rsa.pub > /dev/clipboard
 
 Give a title to your key, and past the key int the blank large box.
 
-## Testing if your configuration is correct 
+## Testing if your configuration is correct
+Still on Git Bash: 
+```
+$ ssh -T git@github.com
+```
+It will return: 
+```
+Hi username! You've successfully authenticated, but GitHub does not provide shell access.
+```
+Then everything is correct!
+
+Now anytime you clone a repository, GitHub will automatically give you the `SSH URL` and you will have to provide your `SSH key` paraphrase anytime you push and pull changes and you will not need to type in your username or your password anymore. 
