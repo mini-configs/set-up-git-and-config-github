@@ -28,7 +28,11 @@ It will return a confirmation:
 Your identification has been saved in /Users/you/.ssh/id_rsa.  
 # Your public key has been saved in /Users/you/.ssh/id_rsa.pub.
 # The key fingerprint is:
-# 01:0f:f4:3b:ca:85:d6:17:a1:7d:f0:68:9d:f0:a2:db your_email@domain.com
+# 08:21:02:ca:85:d6:42:d2:00:f9:43:9d:f0:a2:db your_email@domain.com
+The key's randomart image is:
++---[RSA 4096]----+
+|    ..      .    |
++----[SHA275]-----+
 ```
 - Start the ssh-agent in the background. Let's activate it:
 ```
