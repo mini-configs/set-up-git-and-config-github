@@ -1,4 +1,6 @@
-## Set up git on Windows :octocat:
+## Set up git and configuring with Github account:octocat:
+
+This configuration can be done in windows, using github bash and similarly in linux.
 
 ### Installing Git
 Download the installer for Windows from the Git [official site](https://git-scm.com/download/).
