@@ -68,7 +68,7 @@ $ cat ~/.ssh/id_rsa.pub > /dev/clipboard
 
 Give a title to your key, and past the key int the blank large box.
 
-## Testing if your configuration is correct
+### Testing if your configuration is correct
 Still on Git Bash: 
 ``` console
 $ ssh -T git@github.com
@@ -79,4 +79,41 @@ Hi username! You've successfully authenticated, but GitHub does not provide shel
 ```
 Then everything is correct!
 
-Now anytime you clone a repository, GitHub will automatically give you the `SSH URL` and you will have to provide your `SSH key` paraphrase anytime you push and pull changes and you will not need to type in your username or your password anymore. 
+Now anytime you clone a repository, GitHub will automatically give you the `SSH URL` and you will have to provide your `SSH key` paraphrase anytime you push and pull changes and you will not need to type in your username or your password anymore.
+
+### Add your Git username and set your email
+
+Important: every Git commit will use this information (username and email) to identify you as the author.
+
+Add your username:
+```
+git config --global user.name "YOUR_USERNAME"
+```
+
+Set your email address: 
+```
+git config --global user.email "your_email_address@example.com"
+```
+
+Obs.: You’ll need to do this only once, since you are using the `--global` option. Check global infos: `git config --global --list` 
+
+### Basic Git Commands
+```
+# View your remote repositories
+git remote -v
+
+# Create a branch
+git checkout -b NAME-OF-BRANCH
+
+# Work on an existing branch - To switch to an existing branch, so you can work on it:
+git checkout NAME-OF-BRANCH
+
+# View your remote repositories
+git remote -v
+
+# Send changes to gitlab/github.com - To push all local commits to the remote repository:
+git push REMOTE NAME-OF-BRANCH
+
+
+
+```
