@@ -108,12 +108,7 @@ git checkout -b NAME-OF-BRANCH
 # Work on an existing branch - To switch to an existing branch, so you can work on it:
 git checkout NAME-OF-BRANCH
 
-# View your remote repositories
-git remote -v
-
 # Send changes to gitlab/github.com - To push all local commits to the remote repository:
 git push REMOTE NAME-OF-BRANCH
-
-
 
 ```
