@@ -86,19 +86,19 @@ Now anytime you clone a repository, GitHub will automatically give you the `SSH 
 Important: every Git commit will use this information (username and email) to identify you as the author.
 
 Add your username:
-```
+```console
 git config --global user.name "YOUR_USERNAME"
 ```
 
 Set your email address: 
-```
+```console
 git config --global user.email "your_email_address@example.com"
 ```
 
 Obs.: You’ll need to do this only once, since you are using the `--global` option. Check global infos: `git config --global --list` 
 
 ### Basic Git Commands
-```
+```console
 # View your remote repositories
 git remote -v
 
@@ -111,4 +111,30 @@ git checkout NAME-OF-BRANCH
 # Send changes to gitlab/github.com - To push all local commits to the remote repository:
 git push REMOTE NAME-OF-BRANCH
 
+```
+### Checkout a branch into a local repository
+On your local system, make sure you have a local repository cloned from the remote repository. Then, do the following:
+
+List all your branches, at to the root of the local repository: ``` $ git branch -a ```
+
+Something similar to the following:
+```console
+* master   <feature_branch>
+  remotes/origin/<feature_branch>
+  remotes/origin/master
+```
+
+Checkout the branch you want to use.
+```console
+$ git checkout <feature_branch>
+```
+Confirm you are now working on that branch:
+```console
+$ git branch
+```
+Something similar to the following:
+```console
+$ git branch 
+* <feature_branch>
+  master
 ```
