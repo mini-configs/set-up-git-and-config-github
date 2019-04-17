@@ -142,8 +142,8 @@ $ git branch
 ### Checking for existing SSH keys 
 
 Windows: Open Git Bash.
-````
+```console
 #To see if existing SSH keys are present:
 $ ls -al ~/.ssh
 # Lists the files in your .ssh directory, if they exist. Check the directory listing to see if you already have a public SSH key.
-````
+```
