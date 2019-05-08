@@ -147,3 +147,20 @@ Windows: Open Git Bash.
 $ ls -al ~/.ssh
 # Lists the files in your .ssh directory, if they exist. Check the directory listing to see if you already have a public SSH key.
 ```
+### Untrack files already added to git repository based on .gitignore 
+1) Commit all your changes
+Before proceeding, make sure all your changes are committed, including your .gitignore file.
+
+2) Remove everything from the repository. To clear your repo: `git rm -r --cached .`
+```console
+#rm is the remove command
+#-r will allow recursive removal
+#–cached will only remove files from the index. Your files will still be there.
+#The . indicates that all files will be untracked.
+```
+The rm command can be unforgiving.
+
+3) Re add everything `git add .`
+
+4) Commit `git commit -m ".gitignore fix"`
+Done! Repo is clean :)
