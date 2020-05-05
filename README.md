@@ -146,6 +146,8 @@ Windows: Open Git Bash.
 # To see if existing SSH keys are present:
 $ ls -al ~/.ssh
 # Lists the files in your .ssh directory, if they exist. Check the directory listing to see if you already have a public SSH key.
+# Copy existing ssh key
+$ cat ~/.ssh/id_rsa.pub
 ```
 ### Untrack files already added to git repository based on .gitignore 
 1) Commit all your changes
